@@ -1,0 +1,30 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+* {
+  /* Tất cả thẻ được kế thừa từ box sizing của html */
+  box-sizing: inherit;
+}
+html {
+  /* Để biến 1 rem thành 10px */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  /* sans-seif là chủng chữ không chân, đc dùng nếu Roboto không tải được */
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.grid {
+  /* Tại màn hình mình tới 1500px lận */
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.grid__full-width {
+  width: 100%;
+}
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+}
