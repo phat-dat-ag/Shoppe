@@ -3,6 +3,7 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
+  --border-color: #dbdbdb;
 }
 * {
   /* Tất cả thẻ được kế thừa từ box sizing của html */
@@ -38,4 +39,61 @@ html {
   to {
     opacity: 1;
   }
+}
+/* Modal layout*/
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.modal__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__body {
+  position: relative;
+  margin: auto;
+  z-index: 1;
+}
+/* Button style */
+/* btn là phần chung: nút dùng chung */
+.btn {
+  background-color: var(--white-color);
+  min-width: 142px;
+  height: 34px;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  /* Bỏ padding mặc địng trong thẻ button */
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn.btn--normal:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.btn.btn--size-s {
+  padding: 0 8px;
+  height: 32px;
+  font-size: 1.2rem;
+}
+.btn.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+/* Vô hiệu hóa nút bấm: Dành cho BE */
+.btn.btn--disable {
+  cursor: default;
+  background-color: #c3c3c3;
+  color: #949494;
 }
